@@ -1,0 +1,66 @@
+load ../resources/input/manhattan-small.png myimg
+blur myimg myimg-blur
+sharpen myimg myimg-sharpen
+red-component myimg myimg-red-c
+green-component myimg myimg-green-c
+blue-component myimg myimg-blue-c
+value-component myimg myimg-value
+luma-component myimg myimg-luma
+intensity-component myimg myimg-intensity
+sepia myimg myimg-sepia
+brighten 50 myimg myimg-brighten-50
+brighten -50 myimg myimg-darken-50
+rgb-split myimg myimg-red myimg-green myimg-blue
+rgb-combine myimg-combine myimg-red myimg-green myimg-blue
+horizontal-flip myimg myimg-horizontal-flip
+vertical-flip myimg myimg-vertical-flip
+histogram myimg myimgHist
+color-correct myimg myimgCC
+histogram myimgCC myimgHistColorCorrect
+levels-adjust 0 145 255 myimg myimgLA
+histogram myimgLA myimgLevelAdjustHist
+blur myimg myimg-blur-split split 100
+sharpen myimg myimg-sharpen-split split 0
+red-component myimg myimg-red-c-split spit 90
+green-component myimg myimg-green-c-split split 80
+blue-component myimg myimg-blue-c-split split 50
+value-component myimg myimg-value-split split 40
+luma-component myimg myimg-luma-split split 30
+intensity-component myimg myimg-intensity-split split 20
+sepia myimg myimg-sepia-split split 10
+color-correct myimg myimgCC-split split 50
+levels-adjust 0 145 255 myimg myimgLA-split split 50
+compress 0 myimg myimgCompress0
+compress 50 myimg myimgCompress50
+compress 100 myimg myimgCompress100
+save ../resources/output/myimg.png myimg
+save ../resources/output/myimgCompress0.png myimgCompress0
+save ../resources/output/myimgCompress50.png myimgCompress50
+save ../resources/output/myimgCompress100.png myimgCompress100
+save ../resources/output/myimg-blur.jpg myimg-blur
+save ../resources/output/myimg-sharpen.ppm myimg-sharpen
+save ../resources/output/myimg-red.jpg myimg-red
+save ../resources/output/myimg-green.png myimg-green
+save ../resources/output/myimg-blue.ppm myimg-blue
+save ../resources/output/myimg-combine.ppm myimg-combine
+save ../resources/output/myimg-sepia.jpg myimg-sepia
+save ../resources/output/myimg-value.jpg myimg-value
+save ../resources/output/myimg-luma.png myimg-luma
+save ../resources/output/myimg-intensity.ppm myimg-intensity
+save ../resources/output/myimg-horizontal-flip.jpg myimg-horizontal-flip
+save ../resources/output/myimg-vertical-flip.png myimg-vertical-flip
+horizontal-flip myimg-vertical-flip myimg-horizontal-vertical-flip
+save ../resources/output/myimg-horizontal-vertical-flip.jpg myimg-horizontal-vertical-flip
+save ../resources/output/myimg-brightened-image-by-50.jpeg myimg-brighten-50
+save ../resources/output/myimg-darkened-image-by-50.png myimg-darken-50
+save ../resources/output/myimgHist.png myimgHist
+save ../resources/output/myimgHistColorCorrect.png myimgHistColorCorrect
+save ../resources/output/myimgLevelAdjustHist.png myimgLevelAdjustHist
+save ../resources/output/myimg-blur-split100.jpg myimg-blur-split
+save ../resources/output/myimg-sharpen-split0.jpeg myimg-sharpen-split
+save ../resources/output/myimg-green-c-split.png myimg-green-c-split
+save ../resources/output/myimg-blue-c-split.png myimg-blue-c-split
+save ../resources/output/myimg-value-split.png myimg-value-split
+save ../resources/output/myimg-sepia-split.png myimg-sepia-split
+save ../resources/output/myimgCC-split.png myimgCC-split
+save ../resources/output/myimgLA-split.png myimgLA-split

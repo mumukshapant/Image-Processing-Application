@@ -1,0 +1,186 @@
+----------------------------------------------------------------------------------------------------------------------*
+
+This USEME File illustrates the working of Image Processing Application which can be used as a GUI or as Command Line
+ Arguments.
+
+----------------------------------------------------------------------------------------------------------------------*
+
+
+*---------*
+GUI USEME
+*---------*
+
+1. An image ( PNG/ JPG/ JPEG/ PPM ) can be loaded into the Application using 'Open a File' Button and selecting the
+    file from appropriate location.
+2. Loaded image will be visible in 'Image Preview' along with its Histogram in 'RGB Histogram' .
+3. Different Image Operations can be performed on an Image by clicking on the Radio Button namely :
+    - sepia ( supports Preview )
+    - blur ( supports Preview )
+    - sharpen ( supports Preview )
+    - horizontal_flip
+    - vertical_flip
+    - color_correct ( supports Preview )
+    - luma_component( supports Preview )
+    - intensity_component ( supports Preview )
+    - value_component ( supports Preview )
+    - red_component ( supports Preview )
+    - green_component ( supports Preview )
+    - blue_component ( supports Preview )
+
+4. To Compress an Image, enter a Compression percentage from 0 to 100 and click on 'Compress' button.
+5. To Brighten or Darken an Image, enter a brightness factor ( -100 to 100 ) and click on 'Brighten' button.
+6. To Levels Adjust an Image, enter the black tone (b) , mid tone(m) and white tone (w) values such that
+    these values are from 0 to 255 and b<m<w and click on 'Levels Adjust' button.
+7. To Preview an Image Operation, click on the filters supporting the Preview Functionality
+    ( sepia, blur, sharpen , color_correct, luma_component, intensity_component, value_component,
+       red_component, green_component, blue_component ) , Enter the 'Split Percentage'
+       from 0 to 100 , click on 'Split' Button to see the Preview.
+8. To apply desired filter after the Preview, click on 'Apply Filter' button.
+9. To cancel the Preview Operation, click on 'Cancel' Button.
+10. To save the current Image in the file System click on 'save file' button, and give the filename of your choice
+    but with valid image file extensions i.e. .ppm, .jpeg, .png, .jpg .
+
+NOTE : Sample Images of GUI are in resources/sampleGUI folder.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+*---------*
+CLI USEME
+*---------*
+
+
+Commands Supported:
+
+1. Load -> load <filepath + filename> <image-name>
+    supported formats - jpg/png/jpeg/ppm
+** image has to be loaded in order to run the below commands
+
+   Ex - load resources/input/manhattan-small.png myimg
+
+2. Save -> save <filepath + filename> <image-name>
+    supported formats - jpg/png/jpeg/ppm
+
+    Ex- save resources/output/myimg.png myimg
+
+
+3. Blur -> blur <filename> <dest-filename> or blur <filename> <dest-filename> split <percentage>
+        -> to blur completely or get a image with operation preview with desired percentage.
+
+        Ex - blur myimg myimg-blur
+           - blur myimg myimg-blur-split split 50
+
+4. Sharpen -> sharpen <filename> <dest-filename> or sharpen <filename> <dest-filename> split <percentage>
+        -> to sharpen completely or get a image with operation preview with desired percentage.
+
+         Ex - sharpen myimg myimg-sharpen
+            - sharpen myimg myimg-sharpen split 50
+
+5. Red-component -> red-component <filename> <dest-filename> or red-component <filename> <dest-filename>
+                    split <percentage>
+        -> to red-component completely or get a image with operation preview with desired percentage.
+
+         Ex - red-component myimg myimg-red-c
+            - red-component myimg myimg-red-c split 50
+
+6. Green-component -> green-component <filename> <dest-filename> or green-component <filename> <dest-filename>
+                      split <percentage>
+        -> to green-component completely or get a image with operation preview with desired percentage.
+
+         Ex - green-component myimg myimg-green-c
+            - green-component myimg myimg-green-c split 50
+
+7. Blue-component -> blue-component <filename> <dest-filename> or blue-component <filename> <dest-filename>
+                    split <percentage>
+        -> to blue-component completely or get a image with operation preview with desired percentage.
+
+          Ex - blue-component myimg myimg-blue-c
+             - blue-component myimg myimg-blue-c split 50
+
+8. Value-component -> value-component <filename> <dest-filename> or value-component <filename> <dest-filename>
+                      split <percentage>
+        -> to value-component completely or get a image with operation preview with desired percentage.
+
+          Ex - value-component myimg myimg-value
+             - value-component myimg myimg-value split 50
+
+9. Intensity-component -> intensity-component <filename> <dest-filename> or intensity-component <filename> <dest-filename>
+                    split <percentage>
+        -> to intensity-component completely or get a image with operation preview with desired percentage.
+
+          Ex - luma-component myimg myimg-luma
+             - luma-component myimg myimg-luma split 50
+
+10. Luma-component -> luma-component <filename> <dest-filename> or luma-component <filename> <dest-filename>
+                      split <percentage>
+        -> to luma-component completely or get a image with operation preview with desired percentage.
+
+          Ex - intensity-component myimg myimg-intensity
+             - intensity-component myimg myimg-intensity split 50
+
+
+11. Sepia -> sepia <filename> <dest-filename> or sepia-component <filename> <dest-filename>
+                    split <percentage>
+        -> to sepia-component completely or get a image with operation preview with desired percentage.
+
+         Ex - sepia myimg myimg-sepia
+            - sepia myimg myimg-sepia split 50
+
+
+12. Brighten -> brighten <increment> <filename> <dest-filename>
+        -> to brighten/darken the image based on the value of increment.
+
+         Ex - brighten 50 myimg myimg-brighten-50
+            - brighten -50 myimg myimg-darken-50
+
+13. Flip Image -> to flip the images horizontally or vertically.
+    Horizontal flip -> horizontal-flip    <image-name>    <dest-image-name>
+    Vertical flip -> vertical-flip    <image-name>    <dest-image-name>
+
+     Ex - horizontal-flip myimg myimg-horizontal-flip
+        - vertical-flip myimg myimg-vertical-flip
+
+14. RGB-split -> rgb-split    <image-name>    <dest-image-name-red>    <dest-image-name-green>    <dest-image-name-blue>
+        -> to split the image into it's respctive red green and blue component.
+
+         Ex - rgb-split myimg myimg-red myimg-green myimg-blue
+
+15. RGB-Combine -> rgb-combine    <image-name>    <red-image> <green-image> <blue-image>
+        -> to combine the red, green and blue component to get a combined image.
+** please run the split command prior to combine.
+
+         Ex - rgb-combine myimg-combine myimg-red myimg-green myimg-blue
+
+16. Compress -> compress <percentage> <source-file-name> <dest-file-name>
+            -> to compress image files with percentage between 0 to 100.
+
+             Ex - compress 50 myimg myimgCompress50
+
+
+
+17. Color Correction -> color-correct <source-file-name> <dest-file-name> or
+                        color-correct <source-file-name> <dest-file-name> split 50
+
+            -> to perform color correction on an image and store it into dest-file-name get a image with
+            operation preview with desired percentage.
+
+             Ex - color-correct myimg myimgCC
+                - color-correct myimg myimgCC-split split 50
+
+18. Levels adjustment -> levels-adjust <black> <medium> <white> <source-file-name> <dest-file-name>
+                or levels-adjust <black> <medium> <white> <source-file-name> <dest-file-name> split 50
+
+            -> to perform levels adjustment on an image by providing b, m, w values that range within 0 to 255
+               and are in ascending order of b<m<w.
+            -> to get a image with operation preview with desired percentage.
+
+             Ex - levels-adjust 0 145 255 myimg myimgLA
+                - levels-adjust 0 145 255 myimg myimgLA-split split 50
+
+
+
+19. Histogram -> histogram <source-file-name> <dest-file-name>
+                -> to get histogram of red green blue values in an image.
+                Ex - histogram myimg myimgHist
+
+20. quit -> to terminate the application.
+            Ex - quit

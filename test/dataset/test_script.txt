@@ -1,0 +1,15 @@
+load test/dataset/test_images/JamaicaPlain-small.png jp
+blur jp jp-blur
+sharpen jp jp-sharpen
+rgb-split jp jp-red jp-green jp-blue
+rgb-combine jp-combine jp-red jp-green jp-blue
+sepia jp jp-sepia
+value-component jp jp-value
+luma-component jp jp-luma
+intensity-component jp jp-intensity
+horizontal-flip jp jp-horizontal-flip
+vertical-flip jp jp-vertical-flip
+brighten 50 jp jp-brighten-50
+brighten -50 jp jp-darken-50
+save test/dataset/test_images/jp.ppm jp
+save test/dataset/test_images/jp.png jp

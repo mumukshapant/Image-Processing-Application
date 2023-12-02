@@ -1,0 +1,36 @@
+load resources/input/diya.png diya
+
+compress 90 diya diya-compress-90
+compress 33 diya diya-compress-33
+
+color-correct diya diya-color-correct
+
+levels-adjust 2 98 232 diya diya-levels-adjust-1
+levels-adjust 2 66 123 diya diya-levels-adjust-2
+
+histogram diya diya-histogram
+histogram diya-compress-90 histogram-compress-90
+histogram diya-color-correct histogram-color-correct
+histogram diya-levels-adjust-1 histogram-diya-levels-adjust-1
+
+
+red-component diya diya-red-split split 50
+color-correct diya diya-color-correct-split split 80
+levels-adjust 32 220 232 diya diya-levels-adjust-split split 30
+
+
+save resources/output/diya-compress-90.png diya-compress-90
+save resources/output/diya-compress-33.png diya-compress-33
+
+save resources/output/diya-color-correct.png diya-color-correct
+save resources/output/diya-levels-adjust-1.png diya-levels-adjust-1
+save resources/output/diya-levels-adjust-2.png diya-levels-adjust-2
+
+save resources/output/diya-histogram.png diya-histogram
+save resources/output/histogram-compress-90.png histogram-compress-90
+save resources/output/histogram-color-correct.png histogram-color-correct
+save resources/output/histogram-levels-adjust-1.png histogram-diya-levels-adjust-1
+
+save resources/output/diya-color-correct-split.png diya-color-correct-split
+save resources/output/diya-levels-adjust-split.png diya-levels-adjust-split
+save resources/output/diya-red-component-split.png diya-red-split
