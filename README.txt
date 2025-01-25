@@ -1,12 +1,11 @@
 
 title: CITATION
 message: If you use this project, please cite it using this. 
-authors: Dhruv Saini , Mumuksha Pant 
-description:  The images used in this program are original, owned by Dhruv Saini and Mumuksha Pant and is authorized to
+author(s): Mumuksha Pant 
+description:  The images used in this program are original, owned by Mumuksha Pant and is authorized to
  be used in this project.
 
-Work Ownership: Image Processing Application is a sole work of Dhruv Saini (saini.dh@northeastern.edu) & Mumuksha Pant
- (pant.mu@northeastern.edu) , this is an academic work.
+Work Ownership: Image Processing Application-  this is an academic work.
 
 This README is for Image Processing Application created as part of coursework in CS 5010 Programming Design Paradigms.
 This is a GUI , text-based and script based, interactive application which supports loading, manipulating and saving images
